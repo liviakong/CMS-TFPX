@@ -27,7 +27,7 @@ def tab(i):
 
 tabgroup = [[sg.Tab(f'Sample {i}', tab(i)) for i in range(samples)]]
 layout = [  *instructions,
-            [sg.TabGroup(tabgroup)],
+            [sg.TabGroup(tabgroup, key='tabgroup')],
             [sg.Checkbox('Indicate threshold temperature on plot', default=True, key='threshold')],
             [sg.Button('Submit')]]
 col_layout = [[sg.Column(layout, size_subsample_height=4/3, scrollable=True, vertical_scroll_only=True, expand_y=True)]]
